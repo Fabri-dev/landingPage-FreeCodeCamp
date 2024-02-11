@@ -1,0 +1,310 @@
+*{
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+/*NAVBAR*/
+
+#header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: white;
+}
+
+#img-container{
+    width: 30%;
+}
+
+#header-img{
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 80px;
+    margin: 3%;
+}
+
+#nav-bar{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-bar ul{
+    display: flex;
+    padding: 0;
+    margin:0;
+    width: 100%;
+    height: 100%;
+    justify-content: right;
+    align-items: center;
+    
+}
+
+#nav-bar ul li{
+    padding: 0 3% 0 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link{
+    color: black;
+}
+
+#nav-bar ul li:last-child{
+    background-color: black;
+    padding: 0 4vw 0 4vw;
+}
+
+#nav-bar ul li:last-child a{
+    color: white;
+}
+
+.nav-link:hover{
+    border-bottom: 1px solid currentColor;
+}
+
+@media (max-width:700px) {
+    #header{
+        flex-direction: column;   
+    }
+
+    #header #img-container{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav-bar{
+        width: 100vw;
+    }
+
+    #nav-bar ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    #nav-bar ul li{
+        padding: 0;
+        margin-bottom: 1vh;
+    }
+
+    #nav-bar ul li:last-child{
+        background-color: white;
+    }
+}
+
+/*HOME*/
+
+main{
+    margin-top: 10vh;
+}
+
+#home{
+    background-image: url(https://beaufortpoolcompany.com/wp-content/uploads/2022/08/Leisure-Pools-Reflection-including-Splash-Deck-fiberglass-pool-design-shape-range.webp);
+    background-size: cover; /* Para que la imagen de fondo cubra todo el section */
+    background-position: center; /* Para centrar la imagen */
+    height: 90vh;
+    width: 100%;
+    scroll-margin-top:150px;
+    border-bottom: 4px solid black;
+}
+
+#overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 5em;
+    color: white;
+    margin-top: 10vh;
+    text-align: center;
+}
+
+/*ABOUT US*/
+
+#about-us{
+    scroll-margin-top:150px;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+h2{
+    overflow-wrap: break-word;
+    font-size: 60px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+#about-us p{
+    font-size: large;
+    line-height: 1.5;
+    margin-bottom: 5vh;
+}
+
+#about-us span{
+    font-weight: bold;
+}
+
+
+/*FEATURES*/
+
+#features{
+    scroll-margin-top:110px;
+    margin-top: 5vh;
+}
+
+i{
+    margin: 0 5% 0 5%;
+    color:cadetblue;
+}
+
+.feature-container{
+    display: flex;
+    align-items: center;    
+    background-color: whitesmoke;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#features h3{
+    letter-spacing: 1.3px;
+    font-size: x-large;
+    text-align:center;
+}
+
+#features p{
+    text-align: center;
+    padding: 3% 4% 3% 4%;
+    line-height: 1.4;
+    font-size:large;
+    font-weight: 500;
+}
+
+
+/*CATALOG*/
+
+#title-catalog{
+    text-align: center;
+}
+
+#card-container{
+    margin-top: 10vh;
+    scroll-margin-top:200px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+@media (max-width:700px) {
+    #card-container{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+}
+
+@media (max-width:500px) {
+    #card-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+}
+
+.card{
+    margin:20px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.card div{
+    background-color: black;
+    color: white;
+}
+
+.card ul{
+    padding: 0;
+}
+
+.card button{
+    width: 10vw;
+    height: 3.2vh;
+    margin-bottom: 2vh;
+    border-radius: 50px;
+    background-color: rgb(255, 232, 22);
+    color: black;
+    border: 1px solid black;
+}
+
+
+
+.card button:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: rgb(252, 182, 52);
+}
+
+/*CONTACT*/
+
+#contact{
+    margin-top: 10vh;
+    text-align: left;
+    margin-left: 5%;
+}
+
+/*FOOTER*/
+
+footer{
+    height: 5vh;
+    margin-top: 10vh;
+    background-color: gray;
+    
+}
+
+footer ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li{
+    margin-right: 2vw;
+}
+
+footer ul li:hover{
+    border-bottom:1px solid black ;
+    cursor: pointer;
+}
